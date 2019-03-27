@@ -8,29 +8,30 @@ Color::Color()
 
 Color::Color( float r, float g, float b)
 {
-	// TODO: add your code
+    R = r;
+    G = g;
+    B = b;
 }
 
 Color Color::operator*(const Color& c) const
 {
-	// TODO: add your code
-    return Color(); // dummy (remove)
+    return Color(R*c.R, G*c.G, B*c.B);
 }
 
 Color Color::operator*(const float Factor) const
 {
-	// TODO: add your code
-	return Color(); // dummy (remove)
+	return Color(Factor*R, Factor*G, Factor*B);
 }
 
 Color Color::operator+(const Color& c) const
 {
-	// TODO: add your code
-	return Color(); // dummy (remove)
+	return Color(R+c.R, G+c.G, B+c.B);
 }
 
 Color& Color::operator+=(const Color& c)
 {
-	// TODO: add your code
-	return *this; // dummy (remove)
+    R += c.R;
+    G += c.G;
+    B += c.B;
+	return *this;
 }
